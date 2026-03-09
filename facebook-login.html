@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook - Log In or Sign Up</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;600;700&display=swap">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      max-width: 1000px;
+    }
+
+    .brand {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .logo {
+      font-size: 56px;
+      font-weight: 700;
+      color: #1877f2;
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      font-size: 24px;
+      color: #1c1e21;
+      line-height: 1.3;
+    }
+
+    .login-card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-card input {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .login-card input:focus {
+      border-color: #1877f2;
+      box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+    }
+
+    .login-card input::placeholder {
+      color: #90949c;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 14px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      background: #1877f2;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: background 0.2s;
+    }
+
+    .btn-login:hover {
+      background: #166fe5;
+    }
+
+    .forgot-password {
+      display: block;
+      text-align: center;
+      color: #1877f2;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      border-top: 1px solid #dadde1;
+      margin: 20px 0;
+    }
+
+    .btn-create {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      padding: 12px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #fff;
+      background: #42b72a;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .btn-create:hover {
+      background: #36a420;
+    }
+
+    .notice {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 14px;
+      color: #1c1e21;
+    }
+
+    .notice a {
+      color: #385898;
+      text-decoration: none;
+    }
+
+    .notice a:hover {
+      text-decoration: underline;
+    }
+
+    .demo-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff3cd;
+      color: #856404;
+      padding: 8px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-banner">⚠️ Demo page only — no data is sent or stored</div>
+
+  <div class="container">
+    <div class="brand">
+      <div class="logo">facebook</div>
+      <p class="tagline">Connect with friends and the world around you on Facebook.</p>
+    </div>
+
+    <div class="login-card">
+      <form id="login-form">
+        <input type="text" id="email" placeholder="Email or phone number" autocomplete="username">
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+        <button type="submit" class="btn-login">Log In</button>
+      </form>
+
+      <a href="#" class="forgot-password">Forgot password?</a>
+
+      <div class="divider"></div>
+
+      <a href="#" class="btn-create">Create new account</a>
+    </div>
+  </div>
+
+  <p class="notice">
+    Create a Page for a celebrity, brand or business.
+  </p>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        alert('Please enter both email and password.');
+        return;
+      }
+
+      // Dummy only — show alert instead of submitting
+      alert('This is a demo page. No login request is made.\n\nYou entered:\nEmail: ' + email + '\nPassword: [hidden]');
+    });
+
+    document.querySelector('.forgot-password').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Demo: Forgot password link — no action taken.');
+    });
+
+    document.querySelector('.btn-create').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Demo: Create account — no action taken.');
+    });
+  </script>
+</body>
+</html>
