@@ -81,7 +81,7 @@ Replace the whole block with your own form fields and labels.
 
 5. **Complete the merge**:
    ```bash
-   git commit -m "Resolve merge conflict: update tagline"
+   git commit -m "Resolve merge conflict: form section"
    ```
 
 ---
@@ -102,9 +102,9 @@ To recreate this scenario:
 
 ```bash
 git checkout develop
-git checkout -b feature/update-tagline
-# Edit facebook-login.html tagline → commit
+git checkout -b feature/form-updates
+# Edit form section (4–5 lines) in facebook-login.html → commit
 git checkout develop
-# Edit same line differently → commit
-git merge feature/update-tagline   # Conflict!
+# Edit same form section differently → commit
+git merge feature/form-updates   # Conflict!
 ```
