@@ -34,3 +34,8 @@ document.querySelector('.btn-create').addEventListener('click', function(e) {
 //git is a tool that helps you tag your code
 //git is a tool that helps you release your code
 //git is a tool that helps you deploy your code
+
+//now lets understand how to use git
+//git is a version control system
+//git is a tool that helps you manage your code
+//git is a tool that helps you track your changes
