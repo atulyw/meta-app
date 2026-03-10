@@ -32,3 +32,11 @@ This repo includes an **intentional merge conflict** for teaching. The `develop`
 - Log In button (shows an alert instead of submitting)
 - Forgot password and Create account links (non-functional, show alerts)
 - Responsive layout with Facebook-inspired colors and styling
+
+
+## Demo Features
+
+- Email/phone and password input fields
+- Log In button (shows an alert instead of submitting)
+- Forgot password and Create account links (non-functional, show alerts)
+- Responsive layout with Facebook-inspired colors and styling
