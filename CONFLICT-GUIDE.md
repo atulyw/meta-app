@@ -4,10 +4,10 @@ This repo contains an **intentional merge conflict** for learning. Use it to pra
 
 ## What Happened?
 
-Two branches changed the **same line** in `facebook-login.html`:
+Two branches changed the **same 4–5 lines** (the form section) in `facebook-login.html`:
 
-- **develop** (HEAD): `Discover communities and stay connected on Facebook.`
-- **feature/update-tagline**: `Share your life with friends and family on Facebook.`
+- **develop** (HEAD): Username/email placeholders, hint text, "Log In" button
+- **feature/form-updates**: Phone/email placeholders, "Remember me" checkbox, "Sign In" button
 
 Git cannot choose automatically, so it marks the conflict for you to resolve.
 
@@ -15,21 +15,27 @@ Git cannot choose automatically, so it marks the conflict for you to resolve.
 
 ## Understanding Conflict Markers
 
-In `facebook-login.html` you'll see:
+In `facebook-login.html` you'll see a **multi-line conflict**:
 
 ```
 <<<<<<< HEAD
-      <p class="tagline">Discover communities and stay connected on Facebook.</p>
+        <input type="text" id="email" placeholder="Username or email" autocomplete="username">
+        <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password">
+        <p class="form-hint">Enter your credentials to continue</p>
+        <button type="submit" class="btn-login">Log In</button>
 =======
-      <p class="tagline">Share your life with friends and family on Facebook.</p>
->>>>>>> feature/update-tagline
+        <input type="text" id="email" placeholder="Phone or email" autocomplete="username">
+        <input type="password" id="password" placeholder="Enter password" autocomplete="current-password">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+        <button type="submit" class="btn-login">Sign In</button>
+>>>>>>> feature/form-updates
 ```
 
 | Marker | Meaning |
 |--------|---------|
 | `<<<<<<< HEAD` | Start of **your current branch** (develop) |
 | `=======` | Separator between the two versions |
-| `>>>>>>> feature/update-tagline` | End of **incoming branch** (feature) |
+| `>>>>>>> feature/form-updates` | End of **incoming branch** (feature) |
 
 ---
 
@@ -37,25 +43,23 @@ In `facebook-login.html` you'll see:
 
 ### Option 1: Keep one version
 
-**Keep develop's version:**
-```html
-<p class="tagline">Discover communities and stay connected on Facebook.</p>
-```
-
-**Or keep feature's version:**
-```html
-<p class="tagline">Share your life with friends and family on Facebook.</p>
-```
+Keep either the full HEAD block or the full feature block, and remove the other plus all conflict markers.
 
 ### Option 2: Combine both ideas
 
+Merge the best of both, e.g.:
+
 ```html
-<p class="tagline">Share your life and discover communities on Facebook.</p>
+        <input type="text" id="email" placeholder="Phone or email" autocomplete="username">
+        <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+        <p class="form-hint">Enter your credentials to continue</p>
+        <button type="submit" class="btn-login">Log In</button>
 ```
 
-### Option 3: Write something new
+### Option 3: Write your own version
 
-Replace the whole block with your own tagline.
+Replace the whole block with your own form fields and labels.
 
 ---
 
