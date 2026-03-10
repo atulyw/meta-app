@@ -12,6 +12,12 @@ A simple demo login page styled to look like Facebook. **No data is sent or stor
 
 Open `facebook-login.html` in your browser. The page loads the CSS and JavaScript automatically.
 
+## Git Conflict Demo
+
+This repo includes an **intentional merge conflict** for teaching. The `develop` branch is currently in a conflicted state.
+
+- See **[CONFLICT-GUIDE.md](CONFLICT-GUIDE.md)** for what conflicts are, how to read the markers, and how to resolve them.
+
 ## Demo Features
 
 - Email/phone and password input fields
